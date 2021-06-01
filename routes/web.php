@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('testLayout', function () {
-    return view('layouts.admin');
+Route::get('test', function () {
+    return \App\Models\Category::first();
 });

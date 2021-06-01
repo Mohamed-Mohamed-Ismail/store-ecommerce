@@ -20,15 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5c260c-26c6-439a-8a00-d2b5fda91f1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ProfileRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_26_044850_create_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_26_044956_create_category_translations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/profile/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SubCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +153,7 @@
       <path value="$PROJECT_DIR$/vendor/astrotomic/laravel-translatable" />
       <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
+      <path value="$PROJECT_DIR$/vendor/spatie/enum" />
     </include_path>
   </component>
   <component name="ProjectId" id="1sHWkDgmSekqmPtYKp9L0RyxRnZ" />
@@ -160,7 +164,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -171,16 +175,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\profile" />
-      <recent name="C:\xampp\htdocs\ecommerce\app\Helper" />
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\settings\shippings" />
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard" />
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\auth" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ecommerce\app\Models" />
       <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce\database\seeds" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\subcategories" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers\Dashboard" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\categories" />
     </key>
   </component>
   <component name="RunManager">
@@ -198,7 +202,9 @@
       <option name="presentableId" value="Default" />
       <updated>1620530135812</updated>
       <workItem from="1620530136998" duration="36436000" />
-      <workItem from="1621650634265" duration="21416000" />
+      <workItem from="1621650634265" duration="30790000" />
+      <workItem from="1622507228290" duration="7453000" />
+      <workItem from="1622517529655" duration="4127000" />
     </task>
     <servers />
   </component>
@@ -215,6 +221,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621449724668">
@@ -225,10 +232,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="442" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1621484571592" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1622005447998">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1622088532253">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1622005447998" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1622088532253" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1622004508953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
