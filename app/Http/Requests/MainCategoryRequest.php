@@ -24,16 +24,19 @@ class MainCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' =>'required',
-            'slug' =>'required|unique:categories,slug,'.$this->id,
-
+            'name' => 'required',
+            'slug' => 'required|unique:categories,slug,' . $this->id,
+            'type' => 'required|in:1,2'
         ];
     }
+
     public function messages()
     {
         return [
-            'name.required' =>'هذة القيمة مطلوبة',
-            'slug.required' =>'هذة القيمة مطلوبة',
+            'name.required' => 'هذة القيمة مطلوبة',
+            'type.required' => 'هذة القيمة مطلوبة',
+            'type.in' => 'هذة القيمة غير صحيحة',
+            'slug.required' => 'هذة القيمة مطلوبة',
             'slug.unique' => 'هذة القيمة موجودة بالفعل',
 
         ];

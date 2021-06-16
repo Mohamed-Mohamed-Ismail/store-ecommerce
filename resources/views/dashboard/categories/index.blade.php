@@ -44,7 +44,7 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
                                         <table
-                                            class="table display nowrap table-striped table-bordered scroll-horizontal">
+                                            class="table table-striped table-bordered alt-pagination dataTable">
                                             <thead class="">
                                             <tr>
                                                 <th>الاسم </th>

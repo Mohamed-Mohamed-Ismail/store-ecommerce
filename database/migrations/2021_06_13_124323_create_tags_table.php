@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBrandTranslationsTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateBrandTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('brand_translations', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('brand_id');
-            $table->string('locale');
-            $table->string('name');
-            $table->unique(['brand_id','locale']);
-
+            $table->string('slug')->unique();
+            $table->timestamps();
         });
     }
 
@@ -30,6 +27,6 @@ class CreateBrandTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('brand_translation');
+        Schema::dropIfExists('tags');
     }
 }

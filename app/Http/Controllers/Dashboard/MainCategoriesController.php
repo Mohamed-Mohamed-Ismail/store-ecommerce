@@ -13,15 +13,15 @@ class MainCategoriesController extends Controller
 {
     public function index()
     {
-        $categories = Category::with('_parent')->orderBy('id','DESC') -> paginate(PAGINATION_COUNT);
-            return view('dashboard.categories.index', compact('categories'));
+        $categories = Category::with('_parent')->orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        return view('dashboard.categories.index', compact('categories'));
     }
 
     public function create()
     {
-        $categories =   Category::select('id','parent_id')->get();
+        $categories = Category::select('id', 'parent_id')->get();
 
-        return view('dashboard.categories.create',compact('categories'));
+        return view('dashboard.categories.create', compact('categories'));
     }
 
     public function store(MainCategoryRequest $request)
@@ -36,23 +36,27 @@ class MainCategoriesController extends Controller
         else
             $request->request->add(['is_active' => 1]);
 
-
-        $fileName = "";
-        if ($request->has('photo')) {
-
-            $fileName = uploadImage('brands', $request->photo);
+        if ($request->type == 1)//main_category
+        {
+            $request->request->add(['parent_id' => null]);
         }
 
-        $brand = Brand::create($request->except('_token', 'photo'));
+
+//        $fileName = "";
+//        if ($request->has('photo')) {
+//
+//            $fileName = uploadImage('brands', $request->photo);
+//        }
+
+        $category = Category::create($request->except('_token', 'photo'));
 
         //save translations
-        $brand->name = $request->name;
-        $brand->photo = $fileName;
+        $category->name = $request->name;
+//        $category->photo = $fileName;
 
-        $brand->save();
+        $category->save();
         DB::commit();
-        return redirect()->route('admin.brands')->with(['success' => 'تم ألاضافة بنجاح']);
-
+        return redirect()->route('admin.maincategories')->with(['success' => 'تم ألاضافة بنجاح']);
 
 
     }
