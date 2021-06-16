@@ -13,41 +13,52 @@ class MainCategoriesController extends Controller
 {
     public function index()
     {
-        $categories = Category::with('_parent')->orderBy('id','DESC') -> paginate(PAGINATION_COUNT);
-            return view('dashboard.categories.index', compact('categories'));
+        $categories = Category::with('_parent')->orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        return view('dashboard.categories.index', compact('categories'));
     }
 
     public function create()
     {
-        $categories =   Category::select('id','parent_id')->get();
+        $categories = Category::select('id', 'parent_id')->get();
 
-        return view('dashboard.categories.create',compact('categories'));
+        return view('dashboard.categories.create', compact('categories'));
     }
 
     public function store(MainCategoryRequest $request)
     {
-        try {
-            DB::beginTransaction();
-            if (!$request->has('is_active'))
-                $request->request->add(['is_active' => 0]);
-            else
-                $request->request->add(['is_active' => 1]);
-            if($request -> type == CategoryType::mainCategory) //main category
-            {
-                $request->request->add(['parent_id' => null]);
-            }
 
-            $category = Category::create($request->except('_token'));
-            $category->name = $request->name;
-            $category->save();
-            DB::commit();
-            return redirect()->route('admin.maincategories')->with(['success' => 'تم ادخال قسم جديد بنجاح']);
+        DB::beginTransaction();
 
-        } catch (\Exception $ex) {
-            DB::rollBack();
-            return redirect()->route('admin.maincategories')->with(['error' => 'هناك خطأ ما يرجى المحاولة فيما بعد ']);
+        //validation
 
+        if (!$request->has('is_active'))
+            $request->request->add(['is_active' => 0]);
+        else
+            $request->request->add(['is_active' => 1]);
+
+        if ($request->type == 1)//main_category
+        {
+            $request->request->add(['parent_id' => null]);
         }
+
+
+//        $fileName = "";
+//        if ($request->has('photo')) {
+//
+//            $fileName = uploadImage('brands', $request->photo);
+//        }
+
+        $category = Category::create($request->except('_token', 'photo'));
+
+        //save translations
+        $category->name = $request->name;
+//        $category->photo = $fileName;
+
+        $category->save();
+        DB::commit();
+        return redirect()->route('admin.maincategories')->with(['success' => 'تم ألاضافة بنجاح']);
+
+
     }
 
     public function edit($id)
