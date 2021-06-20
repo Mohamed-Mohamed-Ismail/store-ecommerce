@@ -24,7 +24,7 @@ class Brand extends Model
      *
      * @var array
      */
-    protected $fillable = ['is_active','photo'];
+    protected $fillable = ['is_active', 'photo'];
     /**
      * The attributes that should be cast to native types.
      *
@@ -33,12 +33,19 @@ class Brand extends Model
     protected $casts = [
         'is_active' => 'boolean',
     ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', 1);
+    }
+
     public function getActive()
     {
         return $this->is_active == 0 ? 'غير مفعل' : 'مفعل';
     }
+
     public function getPhotoAttribute($val)
     {
-        return  ($val!== null) ? asset('assets/images/brands/'.$val): "";
+        return ($val !== null) ? asset('assets/images/brands/' . $val) : "";
     }
 }

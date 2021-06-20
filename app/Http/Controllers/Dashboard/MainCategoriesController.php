@@ -36,7 +36,7 @@ class MainCategoriesController extends Controller
         else
             $request->request->add(['is_active' => 1]);
 
-        if ($request->type == 1)//main_category
+        if ($request->type == CategoryType::mainCategory)//main_category
         {
             $request->request->add(['parent_id' => null]);
         }

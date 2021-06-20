@@ -20,19 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5c260c-26c6-439a-8a00-d2b5fda91f1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/tags/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/tags/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/tags/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/general/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/products/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/BrandsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/BrandsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MainCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BrandRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BrandRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_01_045850_create_brand_translations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_01_045850_create_brand_translations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/brands/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/brands/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/brands/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/brands/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/brands/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/brands/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Brand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_13_124415_create_tag_translations_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/includes/sidebare.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
@@ -167,7 +164,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
+    <property name="last_opened_file_path" value="E:/gp/David's project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -178,16 +175,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ecommerce\app\Models" />
-      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ecommerce\app\Http\Requests" />
       <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard" />
-      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers\Dashboard" />
       <recent name="C:\xampp\htdocs\ecommerce\database\seeds" />
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\subcategories" />
+      <recent name="C:\xampp\htdocs\ecommerce\database\factories" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers\Dashboard" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\dashboard\products\general" />
+      <recent name="C:\xampp\htdocs\ecommerce\database\migrations" />
+      <recent name="C:\xampp\htdocs\ecommerce\database" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Models" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -211,7 +211,7 @@
       <workItem from="1622997693170" duration="1274000" />
       <workItem from="1623543520521" duration="3330000" />
       <workItem from="1623587572919" duration="9002000" />
-      <workItem from="1623813623511" duration="467000" />
+      <workItem from="1623813623511" duration="14857000" />
     </task>
     <servers />
   </component>
@@ -239,14 +239,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="442" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1622526766716" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623588765841">
+    <state x="403" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1623816929226">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623588765841" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1622855844002">
+    <state x="403" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1623816929226" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623897140185">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1622855844002" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623897140185" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1624071477616">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1624071477616" />
+    <state x="459" y="86" key="NewPhpClassDialog" timestamp="1623816977796">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="459" y="86" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1623816977796" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1622004508953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

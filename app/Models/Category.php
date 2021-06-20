@@ -42,6 +42,11 @@ class Category extends Model
         return $query->whereNull('parent_id');
     }
 
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', 1);
+    }
+
     public function scopeChild($query)
     {
         return $query->whereNotNull('parent_id');
